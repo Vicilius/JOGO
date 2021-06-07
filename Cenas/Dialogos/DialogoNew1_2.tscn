@@ -1,0 +1,119 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ASSETS/fontes/conthrax-sb.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ASSETS/Dialogo/continuar_dialogo.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/Dialogo/dialogue_box_semnome.png" type="Texture" id=3]
+[ext_resource path="res://SRC/DialogoNew1_2.gd" type="Script" id=4]
+[ext_resource path="res://ASSETS/fontes/dendritic voltage.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://lince presente.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "animado"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 816.157, 550.617 ), Vector2( 813.82, 550.617 ), Vector2( 816.157, 550.617 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+TextNum = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -372.108
+margin_top = -247.027
+margin_right = 363.892
+margin_bottom = 79.9731
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="TextureRect"]
+margin_left = 31.0
+margin_top = 141.0
+margin_right = 709.0
+margin_bottom = 215.0
+custom_fonts/font = SubResource( 1 )
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 816.157
+margin_top = 550.617
+margin_right = 847.157
+margin_bottom = 569.617
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NinePatchRect"]
+anims/animado = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 622.491
+margin_top = 454.861
+margin_right = 1185.49
+margin_bottom = 639.861
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[wave amp=10 freq=2]para skipar o dialogo aperte Esc"
+text = "para skipar o dialogo aperte Esc"
+__meta__ = {
+"_edit_use_anchors_": false
+}

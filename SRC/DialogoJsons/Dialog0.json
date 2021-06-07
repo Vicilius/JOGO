@@ -13,19 +13,20 @@
     ],
     [
         {
-            "Text":"Um vídeo na sala de Jean começa, a gravação esta bem danificada e é bem dificil de ver alguma coisa, quando de repente"
+           "Background":"nada" , "Text":"Um vídeo na sala de Jean começa, a gravação esta bem danificada e é bem dificil de ver alguma coisa, quando de repente"
+        },
+        {
+            "Background":"lince presente" , "Text":"Um homem vestindo uma mascara de lince mostrando sua garra e visto se focar bastante a atenção no vídeo"  
+        },
+        {
+            "Background":"lince presente" ,  "Text": "O homem desconhecido diz claramente para a gravação: Estarei te esperando aqui no Du Repos Show, Cat, meu Irmão"
+        },
+        {
+            "Background":"nada" , "Text": "O vídeo termina"
         }
     ],
     [
-        {
-            "Text":"Um homem vestindo uma mascara de lince mostrando sua garra e visto se focar bastante a atenção no vídeo"  
-        },
-        {
-            "Text": "O homem desconhecido diz claramente para a gravação: Estarei te esperando aqui no Du Repos Show, Cat, meu Irmão"
-        },
-        {
-            "Text": "O vídeo termina"
-        }
+        
     ]
 
         
