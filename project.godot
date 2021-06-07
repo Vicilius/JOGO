@@ -29,12 +29,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://SRC/Objects/Coin.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://SRC/Actors/Enemy.gd"
 }, {
-"base": "Reference",
+"base": "Position2D",
 "class": "Gun",
 "language": "GDScript",
 "path": "res://SRC/Actors/Gun.gd"
