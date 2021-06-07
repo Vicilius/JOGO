@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Menu/menu_jogo_finalizado.webm" type="VideoStream" id=1]
+[ext_resource path="res://Assets/Menu/button.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Menu/durepos_show2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/fontes/dendritic voltage.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Cenas/intro e menu/MenuGame.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.12244
+margin_right = -1.12244
+stream = ExtResource( 1 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -238.59
+margin_top = 156.0
+margin_right = 207.41
+margin_bottom = 471.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+clip_text = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -23.0
+margin_right = 121.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 1 )
+text = "START GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -238.59
+margin_top = 327.0
+margin_right = 207.41
+margin_bottom = 642.0
+text = "adadadadadada"
+icon = ExtResource( 2 )
+flat = true
+clip_text = true
+align = 2
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/Button2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.0
+margin_top = -22.0
+margin_right = 185.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 1 )
+text = "quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Control"]
+position = Vector2( 541.492, 123.862 )
+scale = Vector2( 0.423636, 0.442517 )
+texture = ExtResource( 3 )
+[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]

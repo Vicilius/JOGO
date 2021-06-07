@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Sprites/vida_municao/barra_de_vida_0.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/vida_municao/barra_de_vida.png" type="Texture" id=2]
+[ext_resource path="res://Assets/fontes/dendritic voltage.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Sprites/balasprite/bullet.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = -117.921
+margin_top = -104.416
+margin_right = 366.079
+margin_bottom = 171.584
+rect_min_size = Vector2( -0.004, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 67.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+margin_left = 206.577
+margin_top = 6.48212
+margin_right = 289.577
+margin_bottom = 56.4821
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 268.637
+margin_top = 5.5
+margin_right = 375.637
+margin_bottom = 61.5
+custom_fonts/font = SubResource( 1 )
+text = "10"
+__meta__ = {
+"_edit_use_anchors_": false
+}

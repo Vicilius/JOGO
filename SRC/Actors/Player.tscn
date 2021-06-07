@@ -1,0 +1,103 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://SRC/Actors/Player.gd" type="Script" id=1]
+[ext_resource path="res://animação linha/frame0001.png" type="Texture" id=2]
+[ext_resource path="res://New/animacao cor corrida/frame0001.png" type="Texture" id=3]
+[ext_resource path="res://New/animacao cor corrida/frame0011.png" type="Texture" id=4]
+[ext_resource path="res://New/animacao cor corrida/frame0017.png" type="Texture" id=5]
+[ext_resource path="res://New/animacao cor corrida/frame0019.png" type="Texture" id=6]
+[ext_resource path="res://New/animacao cor corrida/frame0013.png" type="Texture" id=7]
+[ext_resource path="res://New/animacao cor corrida/frame0031.png" type="Texture" id=8]
+[ext_resource path="res://New/animacao cor corrida/frame0035.png" type="Texture" id=9]
+[ext_resource path="res://New/animacao cor corrida/frame0033.png" type="Texture" id=10]
+[ext_resource path="res://New/animacao cor corrida/frame0005.png" type="Texture" id=11]
+[ext_resource path="res://SRC/Actors/Gun.gd" type="Script" id=12]
+[ext_resource path="res://SRC/Actors/AtackBox.gd" type="Script" id=13]
+[ext_resource path="res://New/animacao cor corrida/frame0009.png" type="Texture" id=15]
+[ext_resource path="res://New/animacao cor corrida/frame0023.png" type="Texture" id=16]
+[ext_resource path="res://New/animacao cor corrida/frame0015.png" type="Texture" id=17]
+[ext_resource path="res://New/animacao cor corrida/frame0025.png" type="Texture" id=18]
+[ext_resource path="res://New/animacao cor corrida/frame0037.png" type="Texture" id=19]
+[ext_resource path="res://New/animacao cor corrida/frame0041.png" type="Texture" id=20]
+[ext_resource path="res://New/animacao cor corrida/frame0021.png" type="Texture" id=21]
+[ext_resource path="res://New/animacao cor corrida/frame0029.png" type="Texture" id=22]
+[ext_resource path="res://New/animacao cor corrida/frame0039.png" type="Texture" id=23]
+[ext_resource path="res://New/animacao cor corrida/frame0003.png" type="Texture" id=24]
+[ext_resource path="res://New/animacao cor corrida/frame0007.png" type="Texture" id=25]
+[ext_resource path="res://New/animacao cor corrida/frame0027.png" type="Texture" id=26]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 112.296
+height = 67.3322
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 23 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "melee",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 11 ), ExtResource( 25 ), ExtResource( 15 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 21 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "runRight",
+"speed": 20.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( -24.2784, -0.556812 )
+script = ExtResource( 1 )
+gravity = 500.0
+speed = Vector2( 300, 200 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 60.7027, -48.8854 )
+scale = Vector2( 0.0997652, 0.114864 )
+texture = ExtResource( 2 )
+
+[node name="Gun" type="Position2D" parent="Sprite"]
+position = Vector2( 171.877, 71.1769 )
+scale = Vector2( 0.37535, 0.551618 )
+script = ExtResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+position = Vector2( -608.456, 425.594 )
+scale = Vector2( 10.0235, 8.70595 )
+script = ExtResource( 13 )
+
+[node name="Atack" type="CollisionShape2D" parent="Sprite/Area2D"]
+position = Vector2( 110.243, -35.5928 )
+rotation = 1.49229
+shape = SubResource( 1 )
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 78.1718, -40.7119 )
+scale = Vector2( 0.2, 0.25 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 83.4947, -66.2111 )
+scale = Vector2( -1.368, -0.929 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
+process_mode = 0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 59.5672, -45.2997 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 3 )
+animation = "melee"
+[connection signal="body_shape_entered" from="Sprite/Area2D" to="Sprite/Area2D" method="_on_Area2D_body_shape_entered"]

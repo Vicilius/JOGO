@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Dialogo/dialogue_box_semnome.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/DialogoText.gd" type="Script" id=2]
+[ext_resource path="res://Assets/fontes/conthrax-sb.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Dialogo/continuar_dialogo.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 13
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 7
+extra_spacing_bottom = -9
+extra_spacing_char = 1
+extra_spacing_space = 1
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "pro"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 724.652, 273 ), Vector2( 719.801, 273 ), Vector2( 724.652, 273 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -394.147
+margin_top = -270.472
+margin_right = 427.853
+margin_bottom = 103.527
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="RichTextLabel" parent="TextureRect"]
+margin_left = 34.0
+margin_top = 162.0
+margin_right = 790.0
+margin_bottom = 244.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextureRect"]
+margin_left = 745.573
+margin_top = 220.564
+margin_right = 795.573
+margin_bottom = 251.564
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/NinePatchRect"]
+playback_speed = -17.51
+anims/pro = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]

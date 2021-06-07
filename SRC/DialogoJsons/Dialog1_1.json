@@ -1,0 +1,72 @@
+[
+    [   
+
+    {"Name":"???", "Emotion":"MoodS", "Background": "holograma", "Text": "Olá, você parece em duvida do que escolher para assistir, deixe-me ajuda-lo!"  },
+    {"Name": "Assistente de Programas 1X-10", "Background": "holograma","Emotion": "AssisMood1", "Text":"Eu sou o Assistente de programas 1X-10 e estou ao seu dispor, que tal começarmos com um programa de noticias?"},
+    {"Name": "Assistente de Programas 1X-10", "Background": "holograma","Emotion": "AssisMood3", "Text":"Sintonizando no canal 10!"},
+    {"Name": "Reporter do Programa","Background": "nada","Emotion":"reporter", "Text": "Ocorreu mais um assassinato na ultima noite, o CEO da empresa Katsu de eletrodomésticos Hiromusa Katsu foi encontrado morto com a garganta totalmente cortada em seu escritório, aparentemente o suspeito deve ter aparecido durante a noite passada entre as 11:00pm e 00:30pm." },
+    {"Name": "Reporter do Programa", "Background": "nada","Emotion":"reporter", "Text": "Praticamente o mesmo horário que ocorreu outro assasinato, dessa vez do senhor James Turner, alguns suspeitam que sejam uma quadrilha caçando empresários ou talvez assassinos do reality: Du Repos Show, fazendo mais vitimas pela cidade." },
+    {"Name": "Reporter do Programa", "Background": "nada","Emotion":"reporter", "Text": "Voltaremos com as atualizações do caso mais tarde." },
+    {"Name": "Assistente de Programas 1X-10", "Background": "holograma", "Emotion":"AssisMood5", "Text":"O maldito Du repos Show, só porque a Du repos tem total controle da cidade acham que podem sair matando quem bem entenderem..."},
+    {"Name": "Assistente de Programas 1X-10", "Background": "holograma", "Emotion":"AssisMood4", "Text":"A verdade é que eles podem..."},
+    {"Name": "Assistente de Programas 1X-10", "Background": "holograma","Emotion":"AssisMood4", "Text":"Eu espero que eles não comprem a empresa que programou minha IA, eu não quero me tornar um 'Assistente de programas caveira' ou 'Skull-IA'."},
+    {"Name": "Assistente de Programas 1X-10", "Background": "holograma","Emotion":"AssisMood2", "Text":"Chega de falar sobre mim, você deve estar querendo ver outra coisa "},
+    {"Name": "Assistente de Programas 1X-10", "Background": "holograma","Emotion":"AssisMood3","Text":"Sintonizando no próximo canal!"},
+    {"Name": "Narrador do Programa", "Background": "dureposshow_tv","Emotion":"nada", "Text":"Seja Bem-vindos a “Du repos Show”!"},
+    {"Name": "Narrador do Programa", "Background": "dureposshow_tv","Emotion":"nada","Text":"Um show sobre assassinos competindo para ver quem se torna o número 1 do ranking!"},
+    {"Name": "Assistente de Programas 1X-10", "Background": "dureposshow_tv", "Emotion":"AssisMood5", "Text":"Foi só falar deles que o programa apareceu"},
+    {"Name": "Assistente de Programas 1X-10", "Background": "dureposshow_tv","Emotion":"AssisMood5", "Text":"O karma ta naqueles dias ein?"},
+    {"Name": "Narrador do Programa", "Background": "dureposshow_tv", "Emotion":"nada", "Text":"E para apresentá-lo, nada melhor que chamar o nosso grande lider."},
+    {"Name":"Narrador do Programa", "Background": "dureposshow_tv", "Emotion":"nada", "Text": "Herdeiro da fortuna da família Baptiste,  atual dono da Du Repos e apresentador do show com o mesmo nome."},
+    {"Name":"Narrador do Programa", "Background": "dureposshow_tv", "Emotion":"nada","Text": "Jean Baptiste Pierre!"}
+
+    ],
+    [
+
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "Boa noite senhores como o nosso narrador disse eu sou Jean, também conhecido como Jean Virtuoso."  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo3", "Background": "cenário jean", "Text": "e é uma honra apresentar este grande show hoje para vocês."  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo4", "Background": "cenário jean", "Text": "Na edição de hoje eu tenho uma história para contar a todos, um caso que aconteceu comigo e de como esse querido show poderia ter acabado."  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "Como todos sabem o Du Repos Show é um show de assassinos onde eles devem cumprir o máximo de contratos possíveis em um tempo limite de uma semana, nisso tivemos o caso dos irmãos Cat e Lince que se degladiaram durante a transmissão do show no ano passado."  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "E essa foi uma história muito emocionante de ser vista, ainda mais que eu participei ativamente dela!, e essa maravilhosa história começou em 18 de setembro de 204X, com Cat vindo conversar comigo aqui no meu escritório......"  }
+
+    ],
+
+    [
+
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo2", "Background": "cenário jean", "Text": "Tem certeza que realmente deseja sair da Du Repos, CatBoy?"  },
+        {"Name":"Cat", "Emotion":"cat_dialogo3", "Background": "cenário jean", "Text": "Estava prometido isso a muito tempo Jean, depois desses 8 anos você me revelaria sobre meu irmão não se lembra?"  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo2", "Background": "cenário jean", "Text": "A gente realmente prometeu isso?"  },
+        {"Name":"Cat", "Emotion":"cat_dialogo1", "Background": "cenário jean", "Text": "Como você esqueceu isso? eu te enviei um email relembrando isso a 2 dias atrás "  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "Garoto você deve saber que eu tenho coisas mais importantes do que olhar emails, sabe sou dono de uma cidade inteira e também do maior show que essa cidade tem, o Du repos Show"  },
+        {"Name":"Cat", "Emotion":"cat_dialogo4", "Background": "cenário jean", "Text": "Quem sabe uma bala na cabeça não seja mais importante agora!"  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo5", "Background": "cenário jean", "Text": "Eita, não precisa dessa violência toda, sabemos porque você esta aqui hoje."  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "É uma pena perder um funcionário tão bom, porque não reconsidera voltar a trabalhar pra mim, você ganhária milhões participando do Du Repos Show. "  },
+        {"Name":"Cat", "Emotion":"cat_dialogo4", "Background": "cat_ferido", "Text": "Eu ja estou decidido Jean, eu entrei na empresa depois que você me resgatou naquele dia, eu buscava o paradeiro do meu irmão Lince mas mesmo depois desses 8 anos eu ainda não o encontrei e sinceramente acho que ele esta morto. "  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo2", "Background": "cenário jean", "Text": "Ah sim me lembro bem do dia que encontrei o pobre gatinho ferido naquele beco sujo, que tristeza."  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo2", "Background": "cenário jean", "Text": "Bem sobre seu irmão.... eu tenho algo que talvez você queira conferir"  },
+        {"Name":"Cat", "Emotion":"cat_dialogo1", "Background": "cenário jean", "Text": "Oque você tem ai?"  },
+        {"Name":"Jean, O Virtuoso", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "Veja com seus próprios olhos..."  }
+
+
+    ],
+
+    [
+
+        {"Name":"Cat", "Emotion":"cat_dialogo2", "Background": "cenário jean", "Text": "Aquele é o Lince!! Quando você achou isso Jean"  },
+        {"Name":"Jean", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "Achamos isso mais ou menos a uns dois meses atrás, um dos nossos robôs encontrou seu irmão massacrando guardas de uma fábrica, aparentemente deveria ser um contrato, talvez do show mas também não sabemos ao certo ja que não tem nenhum registro sobre lince nos dados dos participantes "  },
+        {"Name":"Cat", "Emotion":"cat_dialogo1", "Background": "cenário jean", "Text": "Farei questão de entrar no Du Repos Show agora, qual o maior contrato no momento?"},
+        {"Name":"Jean", "Emotion":"jean_dialogo1", "Background": "cenário jean", "Text": "Jonathan blake, o fornecedor do mercado negro está nos mais altos, talvez você queira ir pega-lo agora!"},
+        {"Name":"Cat", "Emotion":"cat_dialogo", "Background": "cenário jean", "Text": "Será isso Jean, adiarei minha demissão, tenho Lince para caçar"  }
+
+        
+
+
+    ]
+
+
+
+    
+
+
+
+]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tile_parede.tres" type="TileSet" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2( -0.000244141, 1.52588e-05 )
+scale = Vector2( 1, 1 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -720896, 0, 0, -720887, 0, 0, -720878, 0, 0, -720869, 0, 0, -720860, 0, 0, -720851, 0, 0, -131072, 0, 0, -131063, 0, 0, -131054, 0, 0, -131045, 0, 0, -131036, 0, 0, -131027, 0, 0, 458752, 0, 0, 458761, 0, 0, 458770, 0, 0, 458779, 0, 0, 458788, 0, 0, 458797, 0, 0, 917537, 2, 0, 917542, 2, 0, 1310747, 2, 0, 1310752, 2, 0, 1310757, 2, 0, 1310762, 2, 0, 1310767, 2, 0 )

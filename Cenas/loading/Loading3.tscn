@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://SRC/Loading.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Loading/Loadingbar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Loading/LOADING_4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/fontes/dendritic voltage.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Cenas/Transições/SceneChanger.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/fontes/conthrax-sb.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "aparecer"
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.00392157, 0.00392157, 0, 0 ), Color( 0.00392157, 0.00392157, 0, 0.831373 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -630.589, 421 ), Vector2( 0.411, 421 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = -6
+font_data = ExtResource( 4 )
+
+[node name="Loading" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene = "res://Cenas/1.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 538.129, 314.087 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingBar" parent="." instance=ExtResource( 2 )]
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 421.0
+margin_right = 616.0
+margin_bottom = 550.0
+color = Color( 0.00392157, 0.00392157, 0, 0.831373 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+margin_left = 1.0
+margin_right = 610.0
+margin_bottom = 269.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_text = "A companhia Du repos,ninguem sabe ao certo sobre o seu passado mas sim que atualmente ela é uma organização globalmente poderosa sendo controlada por Jean Pierre Baptiste, é uma empresa funerária principalmente mas devido à sua forte inflûencia comercial os seus serviços expandiram e o sua fonte de renda mais lucrativa atual é o seu show o \"Du Repos SHOW\""
+tab_size = 15
+text = "A companhia Du repos,ninguem sabe ao certo sobre o seu passado mas sim que atualmente ela é uma organização globalmente poderosa sendo controlada por Jean Pierre Baptiste, é uma empresa funerária principalmente mas devido à sua forte inflûencia comercial os seus serviços expandiram e o sua fonte de renda mais lucrativa atual é o seu show o \"Du Repos SHOW\""
+fit_content_height = true
+scroll_following = true
+override_selected_font_color = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+anims/aparecer = SubResource( 2 )
+
+[node name="Continuar" type="RichTextLabel" parent="."]
+margin_left = 638.274
+margin_top = 541.091
+margin_right = 1069.27
+margin_bottom = 683.091
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "
+[wave amp=7 freq=5]Aperte Qualquer botão para continuar[/wave]"
+text = "
+Aperte Qualquer botão para continuar"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

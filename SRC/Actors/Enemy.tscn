@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://SRC/Actors/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://SRC/Assets/sprite_inimigo_idle_1.png" type="Texture" id=2]
+[ext_resource path="res://SRC/Assets/sprite_inimigo_idle_3.png" type="Texture" id=3]
+[ext_resource path="res://SRC/Assets/sprite_inimigo_idle_2.png" type="Texture" id=4]
+[ext_resource path="res://SRC/Assets/sprite_inimigo_idlee_5.png" type="Texture" id=5]
+[ext_resource path="res://SRC/Assets/sprite_inimigo_idlee_4.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 62.0861, 99.0378 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+position = Vector2( -0.440481, 1.56211 )
+scale = Vector2( 0.215207, 0.334264 )
+script = ExtResource( 1 )
+speed = Vector2( 0, 0 )
+
+[node name="icon" type="Sprite" parent="."]
+visible = false
+position = Vector2( 56.373, -133.803 )
+scale = Vector2( 0.331649, 0.280326 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 74.7901, -101.588 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 47.3409, -127.75 )
+scale = Vector2( 0.339236, 0.283693 )
+frames = SubResource( 2 )
+animation = "Idle"
+frame = 1
+playing = true

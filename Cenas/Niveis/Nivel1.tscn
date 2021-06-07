@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Cenas/Dialogo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/Niveis/Nivel1.gd" type="Script" id=2]
+[ext_resource path="res://lince presente.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Fase" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Fase"]
+margin_right = 1025.0
+margin_bottom = 596.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" parent="Fase" instance=ExtResource( 1 )]
+margin_left = 492.943
+margin_top = 599.323
+margin_right = 492.943
+margin_bottom = 599.323
+TextNum = 2
+[connection signal="modal_closed" from="Fase" to="." method="_on_Fase_modal_closed"]
+[connection signal="modal_closed" from="Fase/Control" to="." method="_on_Control_modal_closed"]
