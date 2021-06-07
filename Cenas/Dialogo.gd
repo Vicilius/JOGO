@@ -61,8 +61,7 @@ func nextPhrase() -> void:
 	finished = false
 	
 	$TextureRect/Nome.text = dialog[TextNum][phraseNum]["Name"]
-	$TextureRect/Texto2.text = dialog[TextNum][phraseNum]["Text"]
-	
+	$TextureRect/Texto2.text = dialog[TextNum][phraseNum]["Text"]	
 	
 	$TextureRect/Texto2.visible_characters = 0
 	

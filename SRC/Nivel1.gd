@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -16,11 +16,9 @@ func _ready():
 #	pass
 
 
-
-
-
-
-
-func _on_Control_modal_closed():
-	get_tree().change_scene("res://Cenas/Nivel/Nivel1.tscn")
+func _on_Dialogo_modal_closed():
+	get_tree().change_scene("res://Cenas/Niveis/Nivel1_1.tscn")
 	pass # Replace with function body.
+
+
+
