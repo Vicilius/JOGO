@@ -4,7 +4,7 @@ extends "res://SRC/Actors/Actor.gd"
 signal killed()
 
 var MAX_SPEED = 700
-const GRAVITY = 300
+const GRAVITY = 50
 const Walk_speed = 300
 const Dash_speed = 600
 const Crouch_speed = 100

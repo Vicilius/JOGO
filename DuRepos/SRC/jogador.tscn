@@ -76,6 +76,11 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "dash",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "gun",
@@ -91,15 +96,15 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 29 ), ExtResource( 32 ), ExtResource( 40 ), ExtResource( 46 ), ExtResource( 36 ), ExtResource( 47 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 39 ), ExtResource( 34 ), ExtResource( 27 ), ExtResource( 43 ), ExtResource( 35 ), ExtResource( 42 ), ExtResource( 38 ), ExtResource( 31 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 41 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "ataque2",
 "speed": 4.98
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
@@ -119,11 +124,6 @@ animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "tomou",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "dash",
 "speed": 5.0
 } ]
 
@@ -146,6 +146,7 @@ scale = Vector2( 7.53472, -6.84281 )
 collision_layer = 9
 collision_mask = 9
 script = ExtResource( 2 )
+gravity = 200.0
 speed = Vector2( 50, 100 )
 
 [node name="ResetAttack" type="Timer" parent="Player"]
@@ -176,8 +177,7 @@ animation = "null"
 position = Vector2( -0.407681, -1.55042 )
 scale = Vector2( 0.0280299, 0.0312663 )
 frames = SubResource( 4 )
-animation = "ataque"
-frame = 10
+animation = "gun"
 playing = true
 flip_h = true
 __meta__ = {
@@ -185,7 +185,7 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( -2.61354, -11.8447 )
+position = Vector2( -2.61352, -3.13181 )
 scale = Vector2( 0.792654, 0.916517 )
 current = true
 zoom = Vector2( 2, 2 )

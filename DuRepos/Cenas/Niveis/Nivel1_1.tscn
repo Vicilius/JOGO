@@ -12,5 +12,4 @@ __meta__ = {
 }
 
 [node name="dialogo" parent="." instance=ExtResource( 1 )]
-TextNum = 1
 [connection signal="tree_exited" from="dialogo" to="." method="_on_dialogo_tree_exited"]
