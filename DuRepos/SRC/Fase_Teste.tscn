@@ -1,6 +1,10 @@
 [gd_scene load_steps=89 format=2]
 
+<<<<<<< Updated upstream
 [ext_resource path="res://SRC/jogador.tscn" type="PackedScene" id=1]
+=======
+[ext_resource path="res://New/jogador.tscn" type="PackedScene" id=1]
+>>>>>>> Stashed changes
 [ext_resource path="res://ASSETS/Cenário/Cadeira_1(Costas).png" type="Texture" id=2]
 [ext_resource path="res://Assets/Cenário/asfalto_5 - Copia.png" type="Texture" id=3]
 [ext_resource path="res://ASSETS/Cenário/Cadeira-2(Costas).png" type="Texture" id=4]
