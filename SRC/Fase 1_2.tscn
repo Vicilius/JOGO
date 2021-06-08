@@ -1,0 +1,460 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://SRC/enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SRC/jogador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ASSETS/Cenário/Mesa_1.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/Cenário/Cadeira_1(Frente).png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/Cenário/Aviso.png" type="Texture" id=10]
+[ext_resource path="res://ASSETS/Cenário/Vaso_1.png" type="Texture" id=11]
+[ext_resource path="res://ASSETS/Cenário/Máquina.png" type="Texture" id=12]
+[ext_resource path="res://ASSETS/Cenário/Fundo.png" type="Texture" id=13]
+[ext_resource path="res://ASSETS/Cenário/Porta.png" type="Texture" id=14]
+[ext_resource path="res://ASSETS/Cenário/Parede.png" type="Texture" id=16]
+[ext_resource path="res://ASSETS/Cenário/Chão.png" type="Texture" id=17]
+[ext_resource path="res://ASSETS/Cenário/Vidro.png" type="Texture" id=19]
+[ext_resource path="res://ASSETS/Cenário/Projetor.png" type="Texture" id=21]
+[ext_resource path="res://ASSETS/Cenário/Computador.png" type="Texture" id=23]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1259.57, 68.3781 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -0.7547, 7.92438 )
+
+[node name="Fundo" type="Sprite" parent="."]
+position = Vector2( 503.331, 287.436 )
+scale = Vector2( 0.576717, 0.581038 )
+texture = ExtResource( 13 )
+
+[node name="Vidro" type="Sprite" parent="."]
+position = Vector2( 500.958, 288.409 )
+scale = Vector2( 2.95578, 2.32781 )
+texture = ExtResource( 19 )
+
+[node name="Parede" type="Sprite" parent="."]
+position = Vector2( 41.0297, 517.099 )
+scale = Vector2( 0.139534, 0.139534 )
+texture = ExtResource( 16 )
+
+[node name="Parede2" type="Sprite" parent="."]
+position = Vector2( 41.1245, 436.334 )
+scale = Vector2( 0.139534, 0.139534 )
+texture = ExtResource( 16 )
+
+[node name="Parede4" type="Sprite" parent="."]
+position = Vector2( 41.1251, 354.32 )
+scale = Vector2( 0.139534, 0.139534 )
+texture = ExtResource( 16 )
+
+[node name="Parede3" type="Sprite" parent="."]
+position = Vector2( 41.2199, 273.555 )
+scale = Vector2( 0.139534, 0.139534 )
+texture = ExtResource( 16 )
+
+[node name="Parede6" type="Sprite" parent="."]
+position = Vector2( 41.233, 191.538 )
+scale = Vector2( 0.139534, 0.139534 )
+texture = ExtResource( 16 )
+
+[node name="Parede7" type="Sprite" parent="."]
+position = Vector2( 41.233, 109.6 )
+scale = Vector2( 0.139534, 0.139534 )
+texture = ExtResource( 16 )
+
+[node name="Parede8" type="Sprite" parent="."]
+position = Vector2( 41.1569, 28.0024 )
+scale = Vector2( 0.139534, 0.139534 )
+texture = ExtResource( 16 )
+
+[node name="Parede12" type="Sprite" parent="."]
+position = Vector2( 973.541, 514.435 )
+rotation = -3.14159
+scale = Vector2( 0.175, -0.14 )
+texture = ExtResource( 16 )
+
+[node name="Parede13" type="Sprite" parent="."]
+position = Vector2( 973.541, 433.21 )
+rotation = -3.14159
+scale = Vector2( 0.175, -0.14 )
+texture = ExtResource( 16 )
+
+[node name="Parede15" type="Sprite" parent="."]
+position = Vector2( 973.357, 351.373 )
+rotation = -3.14159
+scale = Vector2( 0.175, -0.14 )
+texture = ExtResource( 16 )
+
+[node name="Parede14" type="Sprite" parent="."]
+position = Vector2( 973.357, 270.148 )
+rotation = -3.14159
+scale = Vector2( 0.175, -0.14 )
+texture = ExtResource( 16 )
+
+[node name="Parede17" type="Sprite" parent="."]
+position = Vector2( 973.68, 188.032 )
+rotation = -3.14159
+scale = Vector2( 0.175, -0.14 )
+texture = ExtResource( 16 )
+
+[node name="Parede16" type="Sprite" parent="."]
+position = Vector2( 973.68, 106.808 )
+rotation = -3.14159
+scale = Vector2( 0.175, -0.14 )
+texture = ExtResource( 16 )
+
+[node name="Parede18" type="Sprite" parent="."]
+position = Vector2( 973.334, 25.0815 )
+rotation = -3.14159
+scale = Vector2( 0.175, -0.14 )
+texture = ExtResource( 16 )
+
+[node name="Cadeira_1(Frente)" type="Sprite" parent="."]
+position = Vector2( 433.961, 514.385 )
+scale = Vector2( 0.320719, 0.321476 )
+texture = ExtResource( 7 )
+
+[node name="Cadeira_1(Frente)3" type="Sprite" parent="."]
+position = Vector2( 764.516, 291.18 )
+scale = Vector2( 0.320719, 0.321476 )
+texture = ExtResource( 7 )
+
+[node name="Cadeira_1(Frente)4" type="Sprite" parent="."]
+position = Vector2( 310.516, 105.18 )
+scale = Vector2( 0.320719, 0.321476 )
+texture = ExtResource( 7 )
+
+[node name="Chão28" type="Sprite" parent="."]
+position = Vector2( 66.9956, -4.58035 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão29" type="Sprite" parent="."]
+position = Vector2( 199.102, -4.59339 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão31" type="Sprite" parent="."]
+position = Vector2( 331.273, -4.61707 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão30" type="Sprite" parent="."]
+position = Vector2( 463.116, -4.57593 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão33" type="Sprite" parent="."]
+position = Vector2( 595.117, -4.57186 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão32" type="Sprite" parent="."]
+position = Vector2( 726.96, -4.53073 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão35" type="Sprite" parent="."]
+position = Vector2( 858.846, -4.5424 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão34" type="Sprite" parent="."]
+position = Vector2( 990.689, -4.50127 )
+scale = Vector2( 0.419216, -0.300314 )
+texture = ExtResource( 17 )
+
+[node name="Chão43" type="Sprite" parent="."]
+position = Vector2( 66.2556, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão42" type="Sprite" parent="."]
+position = Vector2( 198.362, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão41" type="Sprite" parent="."]
+position = Vector2( 330.533, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão40" type="Sprite" parent="."]
+position = Vector2( 462.376, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão39" type="Sprite" parent="."]
+position = Vector2( 594.377, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão38" type="Sprite" parent="."]
+position = Vector2( 726.22, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão37" type="Sprite" parent="."]
+position = Vector2( 858.106, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão36" type="Sprite" parent="."]
+position = Vector2( 989.949, 167.877 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão51" type="Sprite" parent="."]
+position = Vector2( 66.5168, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão50" type="Sprite" parent="."]
+position = Vector2( 198.623, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão49" type="Sprite" parent="."]
+position = Vector2( 330.794, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão48" type="Sprite" parent="."]
+position = Vector2( 462.637, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão47" type="Sprite" parent="."]
+position = Vector2( 594.638, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão46" type="Sprite" parent="."]
+position = Vector2( 726.481, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão45" type="Sprite" parent="."]
+position = Vector2( 858.368, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão44" type="Sprite" parent="."]
+position = Vector2( 990.21, 353.485 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão59" type="Sprite" parent="."]
+position = Vector2( 65.2227, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão58" type="Sprite" parent="."]
+position = Vector2( 197.329, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão57" type="Sprite" parent="."]
+position = Vector2( 329.5, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão56" type="Sprite" parent="."]
+position = Vector2( 461.343, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão55" type="Sprite" parent="."]
+position = Vector2( 593.344, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão54" type="Sprite" parent="."]
+position = Vector2( 725.187, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão53" type="Sprite" parent="."]
+position = Vector2( 857.073, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Chão52" type="Sprite" parent="."]
+position = Vector2( 988.916, 577.693 )
+scale = Vector2( 0.419216, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="Mesa_1" type="Sprite" parent="."]
+position = Vector2( 427.495, 528.993 )
+scale = Vector2( 0.235454, 0.235454 )
+texture = ExtResource( 6 )
+
+[node name="Computador" type="Sprite" parent="."]
+position = Vector2( 397.095, 492.745 )
+scale = Vector2( 0.185158, 0.196018 )
+texture = ExtResource( 23 )
+
+[node name="Mesa_3" type="Sprite" parent="."]
+position = Vector2( 758.05, 305.788 )
+scale = Vector2( 0.235454, 0.235454 )
+texture = ExtResource( 6 )
+
+[node name="Computador3" type="Sprite" parent="."]
+position = Vector2( 727.65, 269.54 )
+scale = Vector2( 0.185158, 0.196018 )
+texture = ExtResource( 23 )
+
+[node name="Mesa_4" type="Sprite" parent="."]
+position = Vector2( 304.05, 119.788 )
+scale = Vector2( 0.235454, 0.235454 )
+texture = ExtResource( 6 )
+
+[node name="Computador4" type="Sprite" parent="."]
+position = Vector2( 273.65, 83.5397 )
+scale = Vector2( 0.185158, 0.196018 )
+texture = ExtResource( 23 )
+
+[node name="Projetor" type="Sprite" parent="."]
+position = Vector2( 456.235, 496.572 )
+scale = Vector2( 0.229928, 0.272285 )
+texture = ExtResource( 21 )
+
+[node name="Projetor2" type="Sprite" parent="."]
+position = Vector2( 786.79, 273.367 )
+scale = Vector2( 0.229928, 0.272285 )
+texture = ExtResource( 21 )
+
+[node name="Projetor3" type="Sprite" parent="."]
+position = Vector2( 332.79, 87.3668 )
+scale = Vector2( 0.229928, 0.272285 )
+texture = ExtResource( 21 )
+
+[node name="Porta" type="Sprite" parent="."]
+position = Vector2( 44.0286, 277.405 )
+scale = Vector2( 0.192851, 0.192851 )
+texture = ExtResource( 14 )
+
+[node name="Porta2" type="Sprite" parent="."]
+position = Vector2( 43.1106, 92.0866 )
+scale = Vector2( 0.192851, 0.192851 )
+texture = ExtResource( 14 )
+
+[node name="Porta4" type="Sprite" parent="."]
+position = Vector2( 968.128, 500.12 )
+scale = Vector2( 0.192851, 0.192851 )
+texture = ExtResource( 14 )
+
+[node name="Porta3" type="Sprite" parent="."]
+position = Vector2( 964.994, 276.428 )
+scale = Vector2( 0.192851, 0.192851 )
+texture = ExtResource( 14 )
+
+[node name="Aviso" type="Sprite" parent="."]
+position = Vector2( 40.9723, 458.325 )
+scale = Vector2( 0.231671, 0.231671 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 66.9956, -4.58035 )
+scale = Vector2( 0.419216, -0.300314 )
+collision_layer = 8
+collision_mask = 2147483656
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1101.11, 3.20751 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 66.9956, 169.42 )
+scale = Vector2( 0.419216, -0.300314 )
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1101.11, 3.20751 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 66.9956, 354.42 )
+scale = Vector2( 0.419216, -0.300314 )
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 1101.01, -0.571289 )
+rotation = -3.12691
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 66.9956, 578.42 )
+scale = Vector2( 0.419216, -0.300314 )
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 1101.11, 3.20751 )
+shape = SubResource( 1 )
+
+[node name="Jogador" parent="StaticBody2D4" instance=ExtResource( 2 )]
+position = Vector2( -13.5357, 188.662 )
+scale = Vector2( 1.1927, -1.66492 )
+
+[node name="Vaso_1" type="Sprite" parent="."]
+position = Vector2( 135.643, 535.5 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_2" type="Sprite" parent="."]
+position = Vector2( 160.224, 535.242 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_4" type="Sprite" parent="."]
+position = Vector2( 686.25, 536.315 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_3" type="Sprite" parent="."]
+position = Vector2( 710.83, 536.057 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_6" type="Sprite" parent="."]
+position = Vector2( 247.231, 312.326 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_5" type="Sprite" parent="."]
+position = Vector2( 271.811, 312.068 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_8" type="Sprite" parent="."]
+position = Vector2( 645.524, 312.326 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_7" type="Sprite" parent="."]
+position = Vector2( 670.105, 312.068 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_10" type="Sprite" parent="."]
+position = Vector2( 568.146, 125.804 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Vaso_9" type="Sprite" parent="."]
+position = Vector2( 592.727, 125.546 )
+scale = Vector2( 0.241369, 0.206058 )
+texture = ExtResource( 11 )
+
+[node name="Máquina" type="Sprite" parent="."]
+position = Vector2( 461.047, 276.437 )
+scale = Vector2( 0.205914, 0.205914 )
+texture = ExtResource( 12 )
+
+[node name="Enemy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 843.739, 549.869 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 765.108, 138.592 )

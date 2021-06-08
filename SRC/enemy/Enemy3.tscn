@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://SRC/Actors/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://imagens/ratao.png" type="Texture" id=2]
+[ext_resource path="res://SRC/Assets/sprite_inimigo_idlee_4.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 224.836, 100.896 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+position = Vector2( -8.00851, -2.64238 )
+scale = Vector2( 0.333839, 0.417421 )
+collision_layer = 10
+collision_mask = 9
+script = ExtResource( 1 )
+speed = Vector2( 200, 0 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -73.3157, -93.0835 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 49.8679, -88.8142 )
+scale = Vector2( 0.170949, 0.109563 )
+frames = SubResource( 2 )
+animation = "Idle"
+speed_scale = 0.7
+playing = true
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite" groups=[
+"Enemy",
+]]
+position = Vector2( -323.843, 468.046 )
+scale = Vector2( 2.9478, 3.52494 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/Area2D"]
+position = Vector2( -121.764, -298.404 )
+scale = Vector2( 1.37174, 1 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 50.806, -90.6272 )
+scale = Vector2( 0.167136, 0.110954 )
+texture = ExtResource( 6 )
+
+[node name="PlatformDetector" type="RayCast2D" parent="."]
+position = Vector2( 62.5181, -62.2627 )
+enabled = true
+
+[node name="FloorDetectorLeft" type="RayCast2D" parent="."]
+position = Vector2( -26.3749, -101.256 )
+scale = Vector2( 9.54991, 3.27365 )
+collision_mask = 8
+
+[node name="FloorDetectorRight" type="RayCast2D" parent="."]
+position = Vector2( 147.504, -97.482 )
+scale = Vector2( 9.54991, 3.27365 )
+collision_mask = 8
+[connection signal="area_entered" from="AnimatedSprite/Area2D" to="." method="_on_Area2D_area_entered"]

@@ -1,0 +1,176 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar3.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/ataque0.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/ataque4.png" type="Texture" id=3]
+[ext_resource path="res://SRC/bor/skull_bot.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/ataque3.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar2.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull_bot_idle_3.png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar4.png" type="Texture" id=8]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar8.png" type="Texture" id=9]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar7.png" type="Texture" id=10]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/ataque2.png" type="Texture" id=11]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/ataque1.png" type="Texture" id=12]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar5.png" type="Texture" id=13]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar1.png" type="Texture" id=14]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull_bot_idle_2.png" type="Texture" id=15]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull-botandar6.png" type="Texture" id=16]
+[ext_resource path="res://ASSETS/Inimigos/inimigo2/skull_bot.png" type="Texture" id=17]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends KinematicBody2D
+
+var is_moving_left = true
+
+var gravity =  10 # check https://www.youtube.com/watch?v=jQKxOEbbirA for more detail
+var velocity = Vector2(0, 0)
+var life = 100
+var speed = -50 # pixels per second
+
+
+func _ready():
+	$AnimatedSprite.play(\"Walk\")
+
+func _process(_delta):
+	if(life <= 0):
+		queue_free()
+	move_character()
+	detect_turn_around()
+		
+func move_character():
+	velocity.x = -speed if is_moving_left else speed
+	velocity.y += gravity
+	
+	velocity = move_and_slide(velocity, Vector2.UP)
+
+func detect_turn_around():
+	if not $FloorDetectorLeft.is_colliding() and is_on_floor():
+		is_moving_left = !is_moving_left
+		scale.x = -scale.x
+
+func hit():
+	$AttackDetector.monitoring = true
+
+func end_of_hit():
+	$AttackDetector.monitoring = false
+	
+func start_walk():
+	$AnimatedSprite.play(\"Walk\")
+
+func _on_PlayerDetector_body_entered(body):
+	$AnimatedSprite.play(\"Attack\")
+
+func _on_AttackDetector_body_entered(body):
+	print(body)
+	var tomou = false
+	if get_slide_count() >0:
+		for i in(get_slide_count()):
+			if (\"Player\" in get_slide_collision(i).collider.name && tomou == false):
+				get_slide_collision(i).life = get_slide_collision(i).life - 20
+				tomou = true
+				yield(get_tree().create_timer(1),\"timeout\")
+				tomou = false
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group(\"Sword\"):
+		life = life -50
+	pass # Replace with function body.
+"
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 76.1815, 106.185 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 197.989, 111.891 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 65.5381, 117.913 )
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+position = Vector2( -13.8948, 3.2439 )
+scale = Vector2( 0.308333, 0.43174 )
+collision_layer = 10
+collision_mask = 11
+script = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 78.2888, -135.776 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 2 )
+animation = "Attack"
+frame = 3
+speed_scale = 0.7
+playing = true
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 84.5676, -132.503 )
+scale = Vector2( 0.0984071, 0.0886414 )
+texture = ExtResource( 4 )
+
+[node name="FloorDetectorLeft" type="RayCast2D" parent="."]
+position = Vector2( 170.789, -87.7666 )
+scale = Vector2( 9.54991, 3.27365 )
+enabled = true
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 83.8779, -116.793 )
+shape = SubResource( 3 )
+
+[node name="AttackDetector" type="Area2D" parent="." groups=[
+"Enemy",
+]]
+position = Vector2( 109.975, -83.7917 )
+rotation = 3.14159
+scale = Vector2( 0.235824, -0.274945 )
+monitoring = false
+monitorable = false
+
+[node name="Attack" type="CollisionShape2D" parent="AttackDetector"]
+position = Vector2( -482.565, -203.919 )
+scale = Vector2( 1.37174, 1 )
+shape = SubResource( 4 )
+
+[node name="PlayerDetector" type="Area2D" parent="." groups=[
+"Enemy",
+]]
+position = Vector2( 109.975, -83.7917 )
+rotation = 3.14159
+scale = Vector2( 0.235824, -0.274945 )
+
+[node name="Attack" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2( -486.73, -198.691 )
+scale = Vector2( 1.37174, 1 )
+shape = SubResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 84.9474, -128.686 )
+shape = SubResource( 5 )
+[connection signal="area_entered" from="AttackDetector" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="PlayerDetector" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
