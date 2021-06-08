@@ -15,7 +15,7 @@ _global_script_classes=[ {
 "path": "res://SRC/Actors/Actor.gd"
 }, {
 "base": "RigidBody2D",
-"class": "Bullet",
+"class": "Bullet1",
 "language": "GDScript",
 "path": "res://SRC/Bullet.gd"
 }, {
@@ -29,12 +29,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://SRC/Objects/Coin.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://SRC/Actors/Enemy.gd"
 }, {
-"base": "Reference",
+"base": "Position2D",
 "class": "Gun",
 "language": "GDScript",
 "path": "res://SRC/Actors/Gun.gd"
@@ -51,7 +51,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
-"Bullet": "",
+"Bullet1": "",
 "Bulllet": "",
 "Coin": "",
 "Enemy": "",
