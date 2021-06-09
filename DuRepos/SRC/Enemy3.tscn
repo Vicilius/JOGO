@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://SRC/Actors/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://imagens/ratao.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/Inimigos/inimigo3/ratao.png" type="Texture" id=2]
 [ext_resource path="res://SRC/Assets/sprite_inimigo_idlee_4.png" type="Texture" id=6]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 224.836, 100.896 )
