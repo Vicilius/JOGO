@@ -68,39 +68,39 @@ animations = [ {
 "name": "tomou",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "wall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
 "loop": true,
 "name": "ataque2",
 "speed": 24.0
-}, {
-"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
-"loop": true,
-"name": "ataque",
-"speed": 24.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "movimento",
-"speed": 20.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "movimento",
+"speed": 20.0
+}, {
 "frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "movimentoagachado",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 24.0
+}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "wall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 16 ) ],
@@ -130,8 +130,8 @@ scale = Vector2( 3.89737, 3.38809 )
 position = Vector2( 1.04904e-05, 2.38419e-05 )
 rotation = 3.14159
 scale = Vector2( 7.53472, -6.84281 )
-collision_layer = 9
-collision_mask = 9
+collision_layer = 11
+collision_mask = 137
 script = ExtResource( 2 )
 gravity = 200.0
 speed = Vector2( 50, 100 )
@@ -165,7 +165,7 @@ position = Vector2( -0.407681, -1.55042 )
 scale = Vector2( 0.0280299, 0.0312663 )
 frames = SubResource( 4 )
 animation = "ataque"
-frame = 3
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {
@@ -175,8 +175,9 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -2.61352, -3.13181 )
 scale = Vector2( 0.792654, 0.916517 )
+offset = Vector2( 0.105, 8.172 )
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 0.892, 0.851 )
 
 [node name="Position2D" type="Position2D" parent="Player"]
 position = Vector2( -5.69713, -3.40228 )

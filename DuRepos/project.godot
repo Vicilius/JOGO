@@ -122,6 +122,11 @@ Jump={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_2="Jogador"
+2d_physics/layer_8="portal"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
