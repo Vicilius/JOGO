@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://ASSETS/Cenário/Fase_1.png" type="Texture" id=1]
 [ext_resource path="res://SRC/jogador.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ASSETS/Cenário/cinza.png" type="Texture" id=3]
 [ext_resource path="res://ASSETS/Cenário/cinza_tile.png" type="Texture" id=4]
 [ext_resource path="res://ASSETS/Cenário/Plataforma.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/Transições/Getready.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 24.472, 826.987, 1204.35, 829.061, 1254, 2239, 0, 2239 )
@@ -137,13 +138,13 @@ points = PoolVector2Array( 89.5, 465.5, 92.1014, 468.833, 952.101, 470.5, 951.60
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 1270.4, 531.68, 1270.4, 1077.51, 1140.4, 1075.01, 1140.4, 535.013 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 1158.21, 375.5, 1160.71, 73, 1237.38, 73, 1240.71, 408, 1155.71, 405.5 )
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 1071.12, 514.458, 1718.62, 517.792, 1718.62, 535.292, 1068.62, 533.625 )
 
-[sub_resource type="TileSet" id=10]
+[sub_resource type="TileSet" id=12]
 0/name = "cinza_tile.png 0"
 0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
@@ -194,13 +195,13 @@ points = PoolVector2Array( 1071.12, 514.458, 1718.62, 517.792, 1718.62, 535.292,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 11 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 12 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -213,7 +214,7 @@ format = 1
 tile_data = PoolIntArray( -655375, 536870913, 0, -65536, 0, 0, 65776, 536870912, 0, 131111, 3, 0, 131154, 3, 0, 196667, 0, 0, 327799, 0, 0, 655380, 1, 0, 851968, -536870908, 0, 1114097, -536870908, 0, 1048678, 1, 0, 1114267, 3, 0, 1376396, 536870913, 0, 1572960, 536870915, 0, 1638468, 3, 0, 2293885, 1, 0 )
 
 [node name="TileMap2" type="TileMap" parent="."]
-tile_set = SubResource( 10 )
+tile_set = SubResource( 12 )
 format = 1
 tile_data = PoolIntArray( -196374, 536870913, 0, 393431, 1, 0, 524412, 1, 0, 1376431, 1, 0 )
 
@@ -229,10 +230,24 @@ scale = Vector2( 0.845798, 0.739491 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground"]
-margin_left = -16.0
-margin_top = -1792.0
-margin_right = 15648.0
-margin_bottom = 5111.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control2" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" parent="Control2" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -785.0
+margin_top = 76.0
+margin_right = 1083.0
+margin_bottom = 1068.0
+rect_scale = Vector2( 2.04, 2.04 )
