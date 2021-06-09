@@ -63,6 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="DureposFinalizado"
+run/main_scene="res://Cenas/Niveis/Fase1.tscn"
 config/icon="res://icon.png"
 
 [display]

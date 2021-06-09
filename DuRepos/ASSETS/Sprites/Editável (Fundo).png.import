@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plataforma.png-03fd2916691eb81bc0bd997662a82ca1.stex"
+path="res://.import/Editável (Fundo).png-b776b3acc6475bd25c79a8338feb78b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/Cenário/plataforma.png"
-dest_files=[ "res://.import/plataforma.png-03fd2916691eb81bc0bd997662a82ca1.stex" ]
+source_file="res://ASSETS/Sprites/Editável (Fundo).png"
+dest_files=[ "res://.import/Editável (Fundo).png-b776b3acc6475bd25c79a8338feb78b2.stex" ]
 
 [params]
 
