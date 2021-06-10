@@ -16,6 +16,7 @@ onready var walk_collision = $CollisionShape2D
 onready var head = $RayTop
 onready var health = Max_life setget _set_health
 onready var Invunerability = $Invencivel
+onready var Atacando = $TImerAtack
 
 var is_crouched = false
 var is_up 
@@ -84,20 +85,20 @@ func _physics_process(delta):
 	pos.y = pos.y + newton
 	
 	if Input.is_action_just_pressed("Melee") && Katana == 2:
-		$ResetAttack.start()
-		$AnimatedSprite.play("ataque")
-		isAttacking = true
+#		$ResetAttack.start()
+#		$AnimatedSprite.play("ataque")
+		Atacando.start()
 		Katana = Katana - 1
 		$AttackArea/CollisionShape2D.disabled = false
 		$AttackArea/CollisionShape2D2.disabled = false
 	elif Input.is_action_just_pressed("Melee") && Katana == 1:
-		$ResetAttack.start()
-		$AnimatedSprite.play("ataque2")
-		isAttacking = true
+#		$ResetAttack.start()
+#		$AnimatedSprite.play("ataque2")
+		Atacando.start()
 		Katana = Katana - 1
 		$AttackArea/CollisionShape2D.disabled = false
 		$AttackArea/CollisionShape2D2.disabled = false
-		
+		Katana = 2
 		
 	if direction.x != 0:
 		sprite.scale.x = 1 if direction.x > 0 else -1
@@ -137,6 +138,8 @@ func _physics_process(delta):
 	
 	pos.x = lerp(pos.x,0,0.2)
 	
+	if is_on_floor()|| is_on_wall():
+		onWall = true
 	
 	if onWall == true:
 		
@@ -170,11 +173,19 @@ func _physics_process(delta):
 	else:
 		$Slide.play("null")
 		newton = GRAVITY
-	if is_on_floor()|| is_on_wall():
-		onWall = true
+
 	
 	if Invunerability.time_left != 0:
 		$AnimatedSprite.play("tomou")
+	
+	if $TImerAtack.time_left != 0:
+		if  Katana == 2:
+			$AnimatedSprite.play("ataque")
+		elif Katana == 1:
+			$AnimatedSprite.play("ataque2")
+	if $TImerAtack.time_left == 0:
+		$AttackArea/CollisionShape2D.disabled = true
+		$AttackArea/CollisionShape2D2.disabled = true
 
 #	if get_slide_count() >0 : 
 #		for i in(get_slide_count()):
@@ -199,24 +210,25 @@ func _on_Timer_timeout():
 	pass # Replace with function body.
 
 
-func _on_AnimatedSprite_animation_finished():
-	#seta a variavel de ataque para falso e impede que o personagem ataque sem o comando
-	if $AnimatedSprite.animation == "ataque":
-		isAttacking = false
-	$AttackArea/CollisionShape2D.disabled = true
-	$AttackArea/CollisionShape2D2.disabled = true
-	
-	if $AnimatedSprite.animation == "ataque2":
-		isAttacking = false
-	$AttackArea/CollisionShape2D.disabled = true
-	
-	#animação e repor ataques da katana
-	if $AnimatedSprite.animation == "ataque":
-		$AnimatedSprite.play("idle")
-	if $AnimatedSprite.animation == "ataque2":
-		$AnimatedSprite.play("idle")
-		Katana = 2
-	pass # Replace with function body.
+#func _on_AnimatedSprite_animation_finished():
+#	#seta a variavel de ataque para falso e impede que o personagem ataque sem o comando
+#	if $AnimatedSprite.animation == "ataque":
+#		isAttacking = false
+#		$AttackArea/CollisionShape2D.disabled = true
+#		$AttackArea/CollisionShape2D2.disabled = true
+#
+#	if $AnimatedSprite.animation == "ataque2":
+#		isAttacking = false
+#		$AttackArea/CollisionShape2D.disabled = true
+#		$AttackArea/CollisionShape2D2.disabled = true
+#
+##	#animação e repor ataques da katana
+##	if $AnimatedSprite.animation == "ataque":
+##		$AnimatedSprite.play("idle")
+##	if $AnimatedSprite.animation == "ataque2":
+##		$AnimatedSprite.play("idle")
+##		Katana = 2
+#	pass # Replace with function body.
 
 
 func _on_ResetAttack_timeout():
