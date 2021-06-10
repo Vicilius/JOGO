@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plataforma.png-788135375f892ab58f44e58bb79f1eaf.stex"
+path="res://.import/gorila.png-88deb88f7a70705a0a1b8d1a69357d7c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/Cenário/Plataforma.png"
-dest_files=[ "res://.import/Plataforma.png-788135375f892ab58f44e58bb79f1eaf.stex" ]
+source_file="res://gorila.png"
+dest_files=[ "res://.import/gorila.png-88deb88f7a70705a0a1b8d1a69357d7c.stex" ]
 
 [params]
 
