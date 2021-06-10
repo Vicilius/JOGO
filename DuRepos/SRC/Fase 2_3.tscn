@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ASSETS/Cenário/Fundo.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/Cenário/asfalto_1 - Copia.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/Cenário/predio_3.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/Cenário/predio_4.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/Cenário/predio_2.png" type="Texture" id=5]
+[ext_resource path="res://SRC/Actors/Enemy.tscn" type="PackedScene" id=6]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 345.942, 372.083, -4.92285, 372.083, -4.92285, -9.74121, 345.942, -9.74121 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "asfalto_1 - Copia.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 62, 2816, 350, 381 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Fundo" type="Sprite" parent="."]
+position = Vector2( 492.609, 125.771 )
+scale = Vector2( 0.844985, 0.844985 )
+texture = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( 655355, 0, 0, 589824, 0, 0, 589829, 0, 0, 589834, 0, 0, 589839, 0, 0 )
+
+[node name="predio_2" type="Sprite" parent="."]
+position = Vector2( 190.17, 390.561 )
+scale = Vector2( 0.11889, 0.11889 )
+texture = ExtResource( 5 )
+
+[node name="predio_10" type="Sprite" parent="."]
+position = Vector2( 1068.38, 391.849 )
+scale = Vector2( 0.11889, 0.11889 )
+texture = ExtResource( 5 )
+
+[node name="predio_3" type="Sprite" parent="."]
+position = Vector2( 644.407, 407.969 )
+scale = Vector2( 0.107277, 0.107277 )
+texture = ExtResource( 3 )
+
+[node name="predio_7" type="Sprite" parent="."]
+position = Vector2( 772.407, 407.969 )
+scale = Vector2( 0.107277, 0.107277 )
+texture = ExtResource( 3 )
+
+[node name="predio_8" type="Sprite" parent="."]
+position = Vector2( 900.407, 407.969 )
+scale = Vector2( 0.107277, 0.107277 )
+texture = ExtResource( 3 )
+
+[node name="predio_9" type="Sprite" parent="."]
+position = Vector2( 1028.41, 407.969 )
+scale = Vector2( 0.107277, 0.107277 )
+texture = ExtResource( 3 )
+
+[node name="predio_4" type="Sprite" parent="."]
+position = Vector2( 148.003, 481.852 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_5" type="Sprite" parent="."]
+position = Vector2( 221.953, 481.952 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_6" type="Sprite" parent="."]
+position = Vector2( 295.703, 481.952 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_13" type="Sprite" parent="."]
+position = Vector2( -189.997, 481.852 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_12" type="Sprite" parent="."]
+position = Vector2( -116.047, 481.952 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_11" type="Sprite" parent="."]
+position = Vector2( -42.2973, 481.952 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_16" type="Sprite" parent="."]
+position = Vector2( 1080.99, 481.112 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_15" type="Sprite" parent="."]
+position = Vector2( 1154.94, 481.212 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="predio_14" type="Sprite" parent="."]
+position = Vector2( 1228.69, 481.212 )
+scale = Vector2( 0.060853, 0.060853 )
+texture = ExtResource( 4 )
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 971.525, 585.344 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 845.475, 583.354 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 548.993, 583.354 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 323.43, 582.691 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 227.689, 583.354 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 701.841, 582.027 )
