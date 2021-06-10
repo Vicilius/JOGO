@@ -32,6 +32,11 @@ points = PoolVector2Array( 0, 0, 1917, 0, 1917, 1070, 0, 1070 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -48,6 +53,11 @@ points = PoolVector2Array( 0, 0, 1917, 0, 1917, 1070, 0, 1070 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -64,6 +74,11 @@ points = PoolVector2Array( 0, 0, 1917, 0, 1917, 1070, 0, 1070 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -80,6 +95,11 @@ points = PoolVector2Array( 0, 0, 1917, 0, 1917, 1070, 0, 1070 )
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -96,6 +116,11 @@ points = PoolVector2Array( 0, 0, 1917, 0, 1917, 1070, 0, 1070 )
 4/tile_mode = 0
 4/occluder_offset = Vector2( 0, 0 )
 4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -123,6 +148,11 @@ points = PoolVector2Array( 1721, 534.875, 1069.96, 534.875, 1069.38, 516.356, 17
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 7 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -139,6 +169,11 @@ points = PoolVector2Array( 1721, 534.875, 1069.96, 534.875, 1069.38, 516.356, 17
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 8 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -194,13 +229,13 @@ __meta__ = {
 [node name="Control" parent="Control2" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -2494.21
-margin_top = -736.382
-margin_right = -626.213
-margin_bottom = 255.618
-rect_scale = Vector2( 2.04, 2.04 )
+margin_left = -534.0
+margin_top = 180.0
+margin_right = 546.0
+margin_bottom = 1013.0
+rect_scale = Vector2( 1.56, 1.72 )
 
 [node name="portal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 12717.1, -787.116 )
 scale = Vector2( 1.01501, 2.41728 )
-next_scene_path = ""
+next_scene_path = "res://Cenas/intro e menu/Cutscene vidro.tscn"
