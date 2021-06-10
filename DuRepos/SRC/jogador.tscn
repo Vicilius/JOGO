@@ -1,27 +1,27 @@
 [gd_scene load_steps=41 format=2]
 
-[ext_resource path="res://SRC/animacao cor corrida/frame0001.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_2.png" type="Texture" id=1]
 [ext_resource path="res://SRC/controlejogador.gd" type="Script" id=2]
-[ext_resource path="res://SRC/animacao cor corrida/frame_hurt.png" type="Texture" id=3]
-[ext_resource path="res://SRC/animacao cor corrida/frame0007.png" type="Texture" id=5]
-[ext_resource path="res://SRC/animacao cor corrida/frame0011.png" type="Texture" id=6]
-[ext_resource path="res://SRC/animacao cor corrida/frame0009.png" type="Texture" id=7]
-[ext_resource path="res://SRC/animacao cor corrida/frame0013.png" type="Texture" id=8]
-[ext_resource path="res://SRC/animacao cor corrida/frame0015.png" type="Texture" id=9]
-[ext_resource path="res://SRC/animacao cor corrida/frame0017.png" type="Texture" id=10]
-[ext_resource path="res://SRC/animacao cor corrida/frame0019.png" type="Texture" id=11]
-[ext_resource path="res://SRC/animacao cor corrida/frame0021.png" type="Texture" id=12]
-[ext_resource path="res://SRC/animacao cor corrida/frame0023.png" type="Texture" id=13]
-[ext_resource path="res://SRC/animacao cor corrida/frame0025.png" type="Texture" id=14]
-[ext_resource path="res://SRC/animacao cor corrida/frame0027.png" type="Texture" id=15]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_6.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/Jogador/cat_caminhada/cat.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/Jogador/cat_caminhada/cat6.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_1.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/Jogador/cat_caminhada/cat_hurt.png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_4.png" type="Texture" id=8]
+[ext_resource path="res://ASSETS/Jogador/cat_caminhada/cat4.png" type="Texture" id=9]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_7.png" type="Texture" id=10]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_12.png" type="Texture" id=11]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_3.png" type="Texture" id=12]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_5.png" type="Texture" id=13]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_9.png" type="Texture" id=14]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_8.png" type="Texture" id=15]
 [ext_resource path="res://SRC/animacao cor corrida/frame0029.png" type="Texture" id=16]
 [ext_resource path="res://SRC/Actors/Gun.gd" type="Script" id=17]
-[ext_resource path="res://SRC/animacao cor corrida/frame0031.png" type="Texture" id=18]
-[ext_resource path="res://SRC/animacao cor corrida/frame0035.png" type="Texture" id=19]
-[ext_resource path="res://SRC/animacao cor corrida/frame0033.png" type="Texture" id=20]
-[ext_resource path="res://SRC/animacao cor corrida/frame0037.png" type="Texture" id=21]
-[ext_resource path="res://SRC/animacao cor corrida/frame0041.png" type="Texture" id=22]
-[ext_resource path="res://SRC/animacao cor corrida/frame0039.png" type="Texture" id=23]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_10.png" type="Texture" id=18]
+[ext_resource path="res://ASSETS/Jogador/cat_pistola/tiro_11.png" type="Texture" id=19]
+[ext_resource path="res://ASSETS/Jogador/cat_caminhada/cat2.png" type="Texture" id=20]
+[ext_resource path="res://ASSETS/Jogador/cat_caminhada/cat5.png" type="Texture" id=21]
+[ext_resource path="res://ASSETS/Jogador/cat_caminhada/cat3.png" type="Texture" id=22]
 [ext_resource path="res://ASSETS/Jogador/ataque/ataque1katana.png" type="Texture" id=48]
 [ext_resource path="res://ASSETS/Jogador/ataque/ataque2katana.png" type="Texture" id=49]
 [ext_resource path="res://ASSETS/Jogador/ataque/ataque6katana.png" type="Texture" id=50]
@@ -58,44 +58,53 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "tomou",
+"name": "dash",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "movimento",
 "speed": 20.0
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "gun",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "fall",
+"name": "tomou",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
 "loop": true,
 "name": "ataque",
 "speed": 24.0
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "wall",
+"speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "movimentoagachado",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "jump",
+"name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "wall",
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
@@ -103,15 +112,21 @@ animations = [ {
 "name": "ataque2",
 "speed": 24.0
 }, {
-"frames": [ ExtResource( 16 ) ],
+"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
 "loop": true,
-"name": "gun",
-"speed": 5.0
+"name": "ataque2",
+"speed": 24.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 16 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 22 ), ExtResource( 9 ), ExtResource( 21 ), ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "dash",
-"speed": 5.0
+"name": "movimento",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 24.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -166,6 +181,8 @@ scale = Vector2( 0.0280299, 0.0312663 )
 frames = SubResource( 4 )
 animation = "ataque"
 frame = 3
+animation = "gun"
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {
@@ -177,7 +194,7 @@ position = Vector2( -2.61352, -3.13181 )
 scale = Vector2( 0.792654, 0.916517 )
 offset = Vector2( 0.105, 8.172 )
 current = true
-zoom = Vector2( 0.892, 0.851 )
+zoom = Vector2( 1.52, 1.664 )
 
 [node name="Position2D" type="Position2D" parent="Player"]
 position = Vector2( -5.69713, -3.40228 )

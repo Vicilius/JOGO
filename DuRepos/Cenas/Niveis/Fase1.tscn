@@ -229,13 +229,13 @@ __meta__ = {
 [node name="Control" parent="Control2" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -2494.21
-margin_top = -736.382
-margin_right = -626.213
-margin_bottom = 255.618
-rect_scale = Vector2( 2.04, 2.04 )
+margin_left = -534.0
+margin_top = 180.0
+margin_right = 546.0
+margin_bottom = 1013.0
+rect_scale = Vector2( 1.56, 1.72 )
 
 [node name="portal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 12717.1, -787.116 )
 scale = Vector2( 1.01501, 2.41728 )
-next_scene_path = ""
+next_scene_path = "res://Cenas/intro e menu/Cutscene vidro.tscn"
