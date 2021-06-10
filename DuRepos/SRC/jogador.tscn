@@ -68,30 +68,25 @@ animations = [ {
 "name": "tomou",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "ataque2",
-"speed": 24.0
+"name": "movimento",
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
 "loop": true,
-"name": "movimento",
-"speed": 20.0
+"name": "ataque",
+"speed": 24.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "movimentoagachado",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
-"loop": true,
-"name": "ataque",
-"speed": 24.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
@@ -102,6 +97,11 @@ animations = [ {
 "loop": true,
 "name": "wall",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "ataque2",
+"speed": 24.0
 }, {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
@@ -161,11 +161,11 @@ animation = "null"
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player" groups=[
 "Player",
 ]]
-position = Vector2( -0.407681, -1.55042 )
+position = Vector2( -0.69631, -1.36763 )
 scale = Vector2( 0.0280299, 0.0312663 )
 frames = SubResource( 4 )
 animation = "ataque"
-frame = 1
+frame = 3
 playing = true
 flip_h = true
 __meta__ = {
@@ -231,7 +231,9 @@ shape = SubResource( 6 )
 
 [node name="Invencivel" type="Timer" parent="Player"]
 one_shot = true
+
+[node name="TImerAtack" type="Timer" parent="Player"]
+one_shot = true
 [connection signal="timeout" from="Player/ResetAttack" to="Player" method="_on_ResetAttack_timeout"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]
-[connection signal="animation_finished" from="Player/AnimatedSprite" to="Player" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="Player/HitBox" to="Player" method="_on_HitBox_area_entered"]
