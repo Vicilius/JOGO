@@ -63,20 +63,20 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "dash",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "gun",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "tomou",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 24.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
@@ -93,11 +93,6 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
 "loop": true,
 "name": "ataque2",
@@ -108,10 +103,15 @@ animations = [ {
 "name": "movimento",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 57 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "ataque",
-"speed": 24.0
+"name": "gun",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "dash",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -164,8 +164,8 @@ animation = "null"
 position = Vector2( -0.407681, -1.55042 )
 scale = Vector2( 0.0280299, 0.0312663 )
 frames = SubResource( 4 )
-animation = "gun"
-frame = 1
+animation = "ataque"
+frame = 4
 playing = true
 flip_h = true
 __meta__ = {
@@ -231,7 +231,8 @@ shape = SubResource( 6 )
 
 [node name="Invencivel" type="Timer" parent="Player"]
 one_shot = true
+
+[node name="TimerAttack" type="Timer" parent="Player"]
 [connection signal="timeout" from="Player/ResetAttack" to="Player" method="_on_ResetAttack_timeout"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]
-[connection signal="animation_finished" from="Player/AnimatedSprite" to="Player" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="Player/HitBox" to="Player" method="_on_HitBox_area_entered"]

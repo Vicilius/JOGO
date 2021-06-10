@@ -81,15 +81,15 @@ func _on_Area2D_area_entered(area):
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 7.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 3 ) ],
 "loop": true,
@@ -120,7 +120,6 @@ position = Vector2( 78.2888, -135.776 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 2 )
 animation = "Attack"
-frame = 3
 speed_scale = 0.7
 playing = true
 
